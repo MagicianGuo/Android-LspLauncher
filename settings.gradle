@@ -26,4 +26,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "LspLauncher"
-include ':app'
+include ':LspLauncher'
