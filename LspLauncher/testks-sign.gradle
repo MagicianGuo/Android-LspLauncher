@@ -1,0 +1,21 @@
+android {
+    signingConfigs {
+        sign {
+            storeFile file("testks.jks")
+            storePassword "testks"
+            keyAlias "testks"
+            keyPassword "testks"
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.sign
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.sign
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
